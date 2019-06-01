@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="src-test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/utils"/>
+	<classpathentry kind="lib" path="lib2/javazoom/basicplayer3.0.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/jflac-1.2.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/jl1.0.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/jmactritonusspi1.74.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/jogg-0.0.7.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/jorbis-0.0.15.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/jspeex0.9.7.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/kj_dsp1.1.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/mp3spi1.9.4.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/tritonus_share.jar"/>
+	<classpathentry kind="lib" path="lib2/javazoom/vorbisspi1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/commons-configuration2-2.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/spring-beans-4.3.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-4.3.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-support-4.3.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-core-4.3.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-expression-4.3.6.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

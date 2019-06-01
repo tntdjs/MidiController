@@ -1,0 +1,67 @@
+package com.tntdjs.midi.controllers.data.config;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+
+import com.tntdjs.midi.controllers.MidiControllerDefMgr;
+
+/**
+ * MidiDeviceXMLHelperFactory
+ * @author tsenausk
+ *
+ */
+public class MidiDeviceXMLHelperFactory {
+	private static Logger LOGGER = LogManager.getRootLogger();
+	private static MidiDeviceXMLHelperFactory INSTANCE;
+	protected IMidiDeviceXMLHelper XMLHELPER;
+
+	/**
+	 * getInstance that initializes the factory
+	 * @param CONTEXT
+	 * @return
+	 * @throws Exception
+	 */
+	public static MidiDeviceXMLHelperFactory getInstance(ApplicationContext CONTEXT) {
+		if (null != CONTEXT) {
+			INSTANCE = new MidiDeviceXMLHelperFactory(CONTEXT);
+		} else {
+			LOGGER.error("Class requires ApplicationContext CONTEXT to initialize.");
+		}
+		return INSTANCE;
+	}
+	
+	/**
+	 * getInstance for all subsequent calls
+	 * @return
+	 * @throws Exception
+	 */
+	public static MidiDeviceXMLHelperFactory getInstance() {
+		if (null == INSTANCE) {
+			LOGGER.error("Class requires ApplicationContext CONTEXT to initialize.");
+		}
+		return INSTANCE;
+	}
+	
+	/**
+	 * MidiDeviceXMLHelperFactory
+	 * @param CONTEXT Application Spring context
+	 */
+	public MidiDeviceXMLHelperFactory(ApplicationContext CONTEXT) {
+		MidiControllerDefMgr midiDefMgr = (MidiControllerDefMgr) CONTEXT.getBean("midiControllerDefMgr");
+		try {
+			XMLHELPER  = (IMidiDeviceXMLHelper) Class.forName(midiDefMgr.getMidiControllerDef().getXmlHandler()).newInstance();
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
+			LOGGER.error("Exception in XML Helper Factory", e);
+		}
+
+	}
+
+	/**
+	 * getXMLHELPER
+	 * @return IMidiDeviceXMLHelper for the XML helper that is currently Spring configured.
+	 */
+	public IMidiDeviceXMLHelper getXMLHELPER() {
+		return XMLHELPER;
+	}
+}
