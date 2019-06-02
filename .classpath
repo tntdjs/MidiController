@@ -24,5 +24,6 @@
 	<classpathentry kind="lib" path="lib/spring-context-support-4.3.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-core-4.3.6.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-expression-4.3.6.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
